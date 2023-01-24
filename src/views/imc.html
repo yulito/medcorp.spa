@@ -1,0 +1,66 @@
+<section class="titles">
+    <h2>Calcula tu IMC</h2>
+</section>
+
+<section class="info-section">
+        <h4><strong>¿Qué es el IMC?</strong></h4>
+    <br>
+    <p><i>
+        El índice de masa corporal (IMC) es un número que se calcula con base en el peso 
+        y la estatura de la persona.  
+    </i></p>
+    <p><i>
+        Este valor no señala el porcentaje exacto de grasa y músculo del paciente, pero si es 
+        un indicador confiable para evaluar estado físico nutricional del paciente, identificar 
+        la categoría en la que se encuentra y guiarlo si es que necesita la ayuda de un 
+        profesional.
+    </i></p>
+</section>
+
+<section class="imc-cal">
+
+    <form id="idImcForm" class="imcForm">
+        <div class="form-item">
+            <label><strong>Calculadora de IMC</strong></label>
+            <hr>
+        </div>
+        <div class="form-item">
+            <input type="text" name="name" id="name" placeholder="Nombre..." autofocus required>
+        </div>
+        <div class="form-item">
+            <select name="sex" id="sex" required>
+                <option selected disabled>Selecciona sexo</option>
+                <option value="m">Mujer</option>
+                <option value="h">Hombre</option>
+            </select>
+        </div>
+        <div class="form-item">
+            <input type="number" name="height" id="height" placeholder="Estatura (sin coma)" pattern="^[0-9]+" required>
+        </div>
+        <div class="form-item">
+            <input type="number" name="weight" id="weight" placeholder="Peso" pattern="^[0-9]+" required>
+        </div>
+        <input type="submit" class="btn " value="Resultado >">
+    </form>
+
+    <!------------- PDF Download ------------->
+    <div class="result off">
+        <label for=""><strong>Resultados</strong></label>
+        
+        <div class="item-result">
+            <hr>
+            <ul>
+                <li><strong>Nombre: </strong><span id="sName"></span></li>
+                <li><strong>Imc: </strong><span id="sImc"></span></li>
+                <li><strong>Estado: </strong><span id="sStatus"></span></li>
+                <li><strong>Información: </strong> 
+                    <p id="sInfo">
+                        
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <button id="btn-imc-pdf" class="btn ">Descargar PDF</button>
+    </div>
+</section>

@@ -1,0 +1,125 @@
+<section class="titles">
+    <h2>Mets</h2>
+</section>
+
+<section class="info-section">
+    <h4><strong>¿Qué es un Mets?</strong></h4>
+<br>
+<p>
+    <i>
+    El MET es la unidad de medida del índice metabólico (cantidad de energía que consume 
+    un individuo en situacion de reposo) y corresponde a 3,5 ml O2/kg x min, que es el 
+    consumo mínimo  de oxígeno que el organismo necesita para mantener sus constantes 
+    vitales.  
+    </i>
+</p>
+<p>
+    <i>
+    A través de esta unidad de medida, catalogando las diferentes actividades según sus intensidades
+    que se pueden realizar de manera diaria, podremos calcular el gasto energético realizado en un día.
+    Para realizar este cálculo, se toma en cuenta el Metabolismo Basal para obtener la "Tasa metabólica"
+    la actividad para realizar y el tiempo que lleva realizar dicha actividad. Los resultados de cada 
+    actividad se suman dando como resultado las calorías gastadas en un día (24 hrs).
+    <strong>Si quieres saber una aproximación al gasto energético que realizas durante un día, 
+        puedes responder el questionario de más abajo, que te permitira obtener
+        dichos resultados.
+    </strong>
+    Se recomienda realizar este questionario todos los días durante una semana para que puedas promediar 
+    tus resultados en un dato que puedas manejar como referencia por si quieres llevar un control general del 
+    gasto energético. Por otro lado, realizar el questionario en un horario de tarde, para así hacer un recuento
+    de las actividades realizadas durante el día.
+    </i>
+</p>
+<br>
+</section>
+<hr><br>
+<section class="modalForm">
+    <form id="idMetsForm" class="formMet">
+        <p>
+            <strong style="color: red; font-size: 10; font-style: oblique; font-weight:bold;">
+                * El tiempo se mide en minutos. Por ejemplo, para anotar 1 hora deberás poner 60 (minutos); 2:23 horas se debe poner 143 y así... .
+            </strong>
+        </p>
+        <p>
+            (<strong><i style="color: red;">* Si no realizas la actividad deja el campo en blanco</i></strong>)
+        </p>
+        <h3 class="title-cal-met"><strong>Gasto energetico del día</strong></h3>
+
+        <input type="number" name="age" id="age" placeholder="Edad">
+        <input type="number" name="weight" id="weight" placeholder="Peso">
+        <input type="number" name="height" id="height" placeholder="Estatura">
+
+        <select name="sex" id="sex">
+            <option selected disabled>Sexo</option>
+            <option value="m">Mujer</option>
+            <option value="h">Hombre</option>
+        </select>
+        <span><strong>* Campos obligatorios.</strong></span>
+        <br>
+        <h4>Sumar tiempo aproximado (recuerda, en minutos) que le dedicas a comer(desayuno, almuerzo, once, cena, etc).</h4>
+        <input type="number" name="foods" id="foods">
+
+        <h4>Sumar tiempo aproximado que le dedicas a un pasatiempo sin esfuerzo (como ver TV o escuchar musica o leer o descanzar sentado).</h4>
+        <input type="number" name="relaxTime" id="relaxTime">
+
+        <h4>Tiempo que le dedicas al dormir.</h4>
+        <input type="number" name="nap" id="nap">
+
+        <h4>Sumar tiempo aproximado que le dedicas a las tareas del hogar (cocinar, limpiar, planchar, etc).</h4>
+        <input type="number" name="homework" id="homework">
+
+        <h4>Sumar tiempo aproximado que le dedicas a caminar(pasear, ir a comprar, realizar tramites).</h4>
+        <input type="number" name="walk" id="walk">
+
+        <select name="walkscore" id="walkscore" disabled>
+            <option disabled selected>Intensidad</option>
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">alta</option>
+        </select>
+
+        <h4>Sumar tiempo aproximado que le dedicas a trabajar (empleo).</h4>
+        <input type="number" name="job" id="job">
+
+        <select name="jobscore" id="jobscore"disabled>
+            <option disabled selected>Intensidad</option>
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">alta</option>
+        </select>
+
+        <h4>Sumar tiempo aproximado que le dedicas a el ejercicio físico (deporte, Gym).</h4>
+        <input type="number" name="sport" id="sport">
+    
+        <select name="typesport" id="typesport" disabled>
+            <option disabled selected>Tipo de actividad</option>
+            <option value="1">Elongación</option>
+            <option value="2">Pilates, yoga o calistenia</option>
+            <option value="3">Pesas o maquinas</option>
+            <option value="4">Cardiovascular(trote, bicicleta, nado, etc)</option>
+        </select>
+
+        <select name="sportscore" id="sportscore" disabled>
+            <option selected disabled>Intensidad</option>
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">Alta</option>
+        </select>
+
+        <div class="btn-met">
+            <input type="submit" class="btn " value="Resultado >">
+        </div>
+    </form>
+
+    <div class="resultMet off">
+        <div class="boxResultMet">
+            <h1 style="color:green;">Resultado cuestionario gasto energético</h1>
+            <hr>
+            <strong style="color: white;">Calorías gastadas en el día: </strong><span class="kcal"></span>            
+            <p><i>Recuerda que es solo un valor aproximado.</i></p>
+            <div>
+                <button class="btnCloser btn">Cerrar</button>
+            </div>
+        </div>        
+    </div>
+</section>
